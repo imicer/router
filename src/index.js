@@ -158,7 +158,8 @@ class Router {
                 }
 
                 if (typeof route.bind === 'function'/* && !route.__isBind*/) {
-                    route.bind.call(node);
+                    route.bind.call(route);
+                    //route.bind.call(node);
                     //route.__isBind = true;
                 }
             };
